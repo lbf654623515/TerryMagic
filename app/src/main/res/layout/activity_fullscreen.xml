@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:gravity="center"
+    tools:context="com.lbf.magic.FullscreenActivity">
+
+    <ImageView
+        android:id="@+id/magic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/example"
+        android:visibility="visible"
+        android:layout_centerInParent="true"/><!--   发布时改为显示-->
+    <RelativeLayout
+        android:id="@+id/recy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/button_totaobao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/sheji" />
+
+        <TextView
+            android:id="@+id/title0"
+            android:layout_below="@id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="共享魔术道具"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <LinearLayout
+            android:id="@+id/simple_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title0"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:id="@+id/simple1"
+                android:layout_width="match_parent"
+                android:layout_height="279px"
+                android:layout_weight="1"
+                android:src="@drawable/money"
+                android:background="@drawable/bg_border"/>
+
+            <ImageView
+
+                android:id="@+id/simple2"
+                android:layout_width="match_parent"
+                android:layout_height="279px"
+                android:layout_weight="1"
+                android:src="@drawable/example"
+                android:background="@drawable/bg_border"/>
+
+            <ImageView
+
+                android:id="@+id/simple3"
+                android:layout_width="match_parent"
+                android:layout_height="279px"
+                android:layout_weight="1"
+                android:src="@drawable/simple3"
+                android:background="@drawable/bg_border"/>
+
+            <ImageView
+
+                android:id="@+id/simple4"
+                android:layout_width="match_parent"
+                android:layout_height="279px"
+                android:layout_weight="1"
+                android:src="@drawable/simple4"
+                android:background="@drawable/bg_border"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@id/simple_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="个人专享魔术道具"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recy"
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:layout_below="@id/title"
+            android:layout_margin="10dp"
+            android:background="#DEDEDE"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
